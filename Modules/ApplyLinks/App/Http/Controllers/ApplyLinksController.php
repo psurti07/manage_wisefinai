@@ -100,8 +100,16 @@ class ApplyLinksController extends Controller
             $message = 'Apply Links updated successfully!';
             ApplylinkWithCriteria::where('applylink_id', $inputs['id'])->delete();
             $res = '';
-            for ($i = 0; $i < count($inputs['criteria']); $i++) {
-                $res = ApplylinkWithCriteria::create(['applylink_id' => $inputs['id'], 'criteria_id' => $inputs['criteria'][$i]]);
+            // for ($i = 0; $i < count($inputs['criteria']); $i++) {
+            //     $res = ApplylinkWithCriteria::create(['applylink_id' => $inputs['id'], 'criteria_id' => $inputs['criteria'][$i]]);
+            // }
+            $criteriaIds = $request->input('criteria', []); // default empty array
+
+            foreach ($criteriaIds as $criteriaId) {
+                $res = ApplylinkWithCriteria::create([
+                    'applylink_id' => $inputs['id'],
+                    'criteria_id' => $criteriaId
+                ]);
             }
             if ($result || $res) {
                 return response()->json(array('type' => 'SUCCESS', 'message' => $message, 'data' => []));
