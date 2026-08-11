@@ -13,7 +13,7 @@ Route::group([
     Route::post('/welcome-message/update', [SiteOptionsController::class,'welcomeMessageUpdate'])->name('welcome-message.update');
 
     Route::get('/account-message', [SiteOptionsController::class,'accountMessage'])->name('account-message');
-    Route::post('/account-message/selfapply-message', [SiteOptionsController::class,'accountMessageUpdate'])->name('account.message.selfapply.update');
+    // Route::post('/account-message/selfapply-message', [SiteOptionsController::class,'accountMessageUpdate'])->name('account.message.selfapply.update');
     Route::post('/account-message/loanagent-message', [SiteOptionsController::class,'accountMessageUpdate'])->name('account.message.loanagent.update');
 
     Route::get('/site-settings', [SiteOptionsController::class,'siteSettings'])->name('site-settings');

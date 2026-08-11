@@ -36,7 +36,7 @@
                 <select class="form-select" name="usertype" id="usertype">
                     <option value="">All</option>
                     <option value="2">Guest User</option>
-                    <option value="1">Self Apply User</option>
+                    {{-- <option value="1">Self Apply User</option> --}}
                     <option value="3">Loan Agent User</option>
                 </select>
             </div>

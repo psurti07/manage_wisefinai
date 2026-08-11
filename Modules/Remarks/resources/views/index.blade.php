@@ -28,7 +28,7 @@
                         <label class="form-label">Product:</label>
                         <select class="form-select" name="parentid" id="parentid">
                             <option value="" selected>All</option>
-                            <option value="self-apply">Self Apply</option>
+                            {{-- <option value="self-apply">Self Apply</option> --}}
                             <option value="hire-agent">Loan Agent</option>
                         </select>
                     </div>

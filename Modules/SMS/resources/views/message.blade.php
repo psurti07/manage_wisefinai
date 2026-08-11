@@ -22,7 +22,7 @@
                 <label class="form-label">Product</label>
                 <select class="form-select" name="product" id="product">
                     <option value="" selected>All</option>
-                    <option value="1">Self Apply</option>
+                    {{-- <option value="1">Self Apply</option> --}}
                     <option value="2">Loan Agent</option>
                     <option value="3">Common</option>
                 </select>
