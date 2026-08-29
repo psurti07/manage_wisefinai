@@ -10,15 +10,15 @@ Route::group([
     'middleware' => ['auth','PreventBackHistory']
 ], function () {
     Route::get('/loanagent/application-details/{applicationId}',[LoanController::class,'applicationDetails'])->name('selfapply.loan.application.details');
-    // Route::post('/selfapply/loan/application-details/delete-status', [LoanController::class, 'applicationStatusDelete'])->name('selfapply.loan.application.details.status.delete');
+    Route::post('/selfapply/loan/application-details/delete-status', [LoanController::class, 'applicationStatusDelete'])->name('selfapply.loan.application.details.status.delete');
 
     // Route::get('/selfapply/loan/application-status/{applicationId}',[LoanStatusController::class,'addStatus'])->name('selfapply.loan.application.status.add.status');
     // Route::post('/selfapply/loan/application-status/predefined-message',[LoanStatusController::class,'predefineMessage'])->name('selfapply.loan.application.status.predefine.message');
     // Route::post('/selfapply/loan/application-status/store',[LoanStatusController::class,'applicationStatusStore'])->name('selfapply.loan.application.status.create');
 
-    // Route::post('/selfapply/loan/application-status',[LoanStatusController::class,'applicationStatus'])->name('selfapply.loan.application.details.status');
+    Route::post('/selfapply/loan/application-status',[LoanStatusController::class,'applicationStatus'])->name('selfapply.loan.application.details.status');
 
-    // Route::get('/selfapply/loan/applications-list/{status}',[LoanController::class,'getApplicationList'])->name('selfapply.loan.application.lists');
+    Route::get('/selfapply/loan/applications-list/{status}',[LoanController::class,'getApplicationList'])->name('selfapply.loan.application.lists');
     Route::get('/loanagent/loan/applications-list/{status}',[LoanController::class,'getLoanAgentApplicationList'])->name('loanagent.loan.application.lists');
     
     
