@@ -17,7 +17,7 @@ Route::group([
 //     Route::post('/selfapply/user/assign-agent', [CustomerController::class,'assignAgent'])->name('selfapply.customers.assign.agent');
 //     Route::post('/selfapply/user/deactivate-account',[CustomerController::class,'deactivateAccount'])->name('selfapply.customers.deactivate.account');
 //     Route::post('/selfapply/user/delete-account',[CustomerController::class,'deleteAccount'])->name('selfapply.customers.delete.account');
-//     Route::post('/selfapply/user/offer-click-counts',[CustomerController::class,'clickCounts'])->name('selfapply.customers.offers.click.count');
+    Route::post('/selfapply/user/offer-click-counts',[CustomerController::class,'clickCounts'])->name('selfapply.customers.offers.click.count');
     
 //     Route::get('/selfapply/applications/{type}', [CustomerController::class, 'saApplication'])->name('selfapply.saapplications');
 //     Route::get('/selfapply/applications-details/{userId}', [CustomerController::class, 'saApplicationDetails'])->name('selfapply.loan.applications.details');
