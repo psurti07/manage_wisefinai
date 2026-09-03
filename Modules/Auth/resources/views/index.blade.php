@@ -19,6 +19,7 @@
                                 </a>
                             </div>
                             <form class="theme-form auth-form" action="{{ route('authenticate') }}" method="post">
+                                @csrf
                                 <h5>Sign in to account</h5>
                                 <div class="form-group">
                                     <label class="col-form-label">Email Address</label>

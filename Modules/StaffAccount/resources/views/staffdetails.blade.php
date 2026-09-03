@@ -91,7 +91,7 @@
                                             <select class="form-control form-select" name="role" id="role">
                                                 <option value="">Select Role</option>
                                                 <option value="1" {{ $staffDetails->role == 1 ? 'selected': '' }}>Office Staff</option>
-                                                <option value="5" {{ $staffDetails->role == 5 ? 'selected': '' }}>Self Apply Staff</option>
+                                                {{-- <option value="5" {{ $staffDetails->role == 5 ? 'selected': '' }}>Self Apply Staff</option>. --}}
                                                 <option value="2" {{ $staffDetails->role == 2 ? 'selected': '' }}>Loan Agent Staff</option>
                                                 <option value="3" {{ $staffDetails->role == 3 ? 'selected': '' }}>IT Staff</option>
                                                 <option value="4" {{ $staffDetails->role == 4 ? 'selected': '' }}>Accounting</option>

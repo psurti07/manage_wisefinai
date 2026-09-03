@@ -15,7 +15,7 @@
                                 <select class="form-control form-select" name="role" id="role">
                                     <option value="">Select Role</option>
                                     <option value="1">Office Staff</option>
-                                    <option value="5">Self Apply Staff</option>
+                                    {{-- <option value="5">Self Apply Staff</option> --}}
                                     <option value="2">Loan Agent Staff</option>
                                     <option value="3">IT Staff</option>
                                     <option value="4">Accounting</option>
