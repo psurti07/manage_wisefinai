@@ -1,5 +1,6 @@
 <script type="text/javascript">
     var ajaxUrls = {
+        'manage.payulog': '{{ route("manage.payulog") }}',
         'manage.paymentlog': '{{ route("manage.paymentlog") }}',
         'manage.subpaisalog': '{{ route("manage.subpaisalog") }}',
         'manage.cipherpaylog': '{{ route("manage.cipherpaylog") }}',

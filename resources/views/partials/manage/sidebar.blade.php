@@ -361,6 +361,13 @@
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
+                            <a class="sidebar-link sidebar-title link-nav payment-log" href="{{ route('manage.payulog') }}" data-table="payu_log_entry">
+                                <span class="rupee-sign">₹</span>
+                                <span class="">Payu Log</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <i class="fa fa-thumb-tack"></i>
                             <a class="sidebar-link sidebar-title link-nav payment-log" href="{{ route('manage.paymentlog') }}" data-table="phonepe_entry">
                                 <span class="rupee-sign">₹</span>
                                 <span class="">PhonePe Log</span>
