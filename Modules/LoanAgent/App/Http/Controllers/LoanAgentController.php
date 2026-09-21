@@ -33,7 +33,7 @@ class LoanAgentController extends Controller
                 $query->where('l.loan_type', $loantype);
             }
 
-            $data = $query->orderByDesc('u.rec_date')->get();
+            $data = $query->orderByDesc('u.update_date')->get();
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('date', function ($row) {
