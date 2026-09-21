@@ -27,7 +27,7 @@ class LoanAgentController extends Controller
             ->where('u.isUser',1)
             ->where('u.isDelete', 0);
             if (!empty($fromDate) && !empty($toDate)) {
-                $query->whereRaw('DATE(u.rec_date)  BETWEEN  ? AND ?', [$fromDate, $toDate]);
+                $query->whereRaw('DATE(u.update_date)  BETWEEN  ? AND ?', [$fromDate, $toDate]);
             }
             if ($loantype != 0) {
                 $query->where('l.loan_type', $loantype);
@@ -37,7 +37,7 @@ class LoanAgentController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('date', function ($row) {
-                    return date('d-m-Y', strtotime($row->rec_date))."<br/>".date('h:i:s A', strtotime($row->rec_date));
+                    return date('d-m-Y', strtotime($row->update_date))."<br/>".date('h:i:s A', strtotime($row->update_date));
                 })
                 ->addColumn('fullname', function ($row) {
                     return $row->first_name . ' ' . $row->last_name;
