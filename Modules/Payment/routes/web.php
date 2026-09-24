@@ -19,6 +19,7 @@ Route::group([
     'as' => 'manage.',
     'middleware' => ['auth','PreventBackHistory']
 ], function () {
+    Route::get('razorpay-log', [PaymentController::class,'phonePayLog'])->name('razorpaylog');
     Route::get('payu-log', [PaymentController::class,'phonePayLog'])->name('payulog');
     Route::get('phonepe-log', [PaymentController::class,'phonePayLog'])->name('paymentlog');
     Route::get('sabpaisa-log', [PaymentController::class,'phonePayLog'])->name('subpaisalog');
